@@ -1,0 +1,549 @@
+{
+ "checks": [
+  {
+   "code": "V1a",
+   "item": "symptom entity rows",
+   "computed": 1487,
+   "stored": 1487,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1b",
+   "item": "syndrome entity rows",
+   "computed": 233,
+   "stored": 233,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1c",
+   "item": "herb entity rows",
+   "computed": 703,
+   "stored": 703,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1d",
+   "item": "visit_symptom edges",
+   "computed": 60689,
+   "stored": 60689,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1e",
+   "item": "visit_syndrome edges",
+   "computed": 11879,
+   "stored": 11879,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1f",
+   "item": "visit_herb edges",
+   "computed": 63192,
+   "stored": 63192,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1g",
+   "item": "visits with symptom %",
+   "computed": 78.6,
+   "stored": 78.6,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1h",
+   "item": "visits with syndrome %",
+   "computed": 40.0,
+   "stored": 40.0,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V1i",
+   "item": "visits with herb %",
+   "computed": 73.3,
+   "stored": 73.3,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V2-symptom",
+   "item": "symptom Gini (raw edges)",
+   "computed": 0.658313,
+   "stored": 0.6583131704262717,
+   "abs_delta": 1.7042627165064772e-07,
+   "passed": true,
+   "note": "dedup variant=0.6542"
+  },
+  {
+   "code": "V2-symptom-p",
+   "item": "symptom perplexity (raw edges)",
+   "computed": 592.79,
+   "stored": 592.7941701962744,
+   "abs_delta": 0.004170196274458249,
+   "passed": true,
+   "note": "dedup variant=599.7"
+  },
+  {
+   "code": "V2-syndrome",
+   "item": "syndrome Gini (raw edges)",
+   "computed": 0.525918,
+   "stored": 0.525917860162435,
+   "abs_delta": 1.3983756497193411e-07,
+   "passed": true,
+   "note": "dedup variant=0.5231"
+  },
+  {
+   "code": "V2-syndrome-p",
+   "item": "syndrome perplexity (raw edges)",
+   "computed": 141.7,
+   "stored": 141.69960377222517,
+   "abs_delta": 0.0003962277748144061,
+   "passed": true,
+   "note": "dedup variant=142.6"
+  },
+  {
+   "code": "V2-herb",
+   "item": "herb Gini (raw edges)",
+   "computed": 0.723345,
+   "stored": 0.7233453781784971,
+   "abs_delta": 3.781784970735558e-07,
+   "passed": true,
+   "note": "dedup variant=0.7224"
+  },
+  {
+   "code": "V2-herb-p",
+   "item": "herb perplexity (raw edges)",
+   "computed": 161.46,
+   "stored": 161.46004768353907,
+   "abs_delta": 4.768353906570155e-05,
+   "passed": true,
+   "note": "dedup variant=162.1"
+  },
+  {
+   "code": "V3-symptom.best",
+   "item": "symptom best discrete model",
+   "computed": "negative_binomial",
+   "stored": "negative_binomial",
+   "abs_delta": null,
+   "passed": true,
+   "note": "AIC: negative_binomial=12892, geometric=12998, discrete_power_law=13763, poisson=102280"
+  },
+  {
+   "code": "V3-symptom.negative_binomial",
+   "item": "symptom AIC negative_binomial",
+   "computed": 12891.8,
+   "stored": 12891.8,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-symptom.geometric",
+   "item": "symptom AIC geometric",
+   "computed": 12998.3,
+   "stored": 12998.3,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-symptom.discrete_power_law",
+   "item": "symptom AIC discrete_power_law",
+   "computed": 13763.0,
+   "stored": 13763.0,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-syndrome.best",
+   "item": "syndrome best discrete model",
+   "computed": "geometric",
+   "stored": "geometric",
+   "abs_delta": null,
+   "passed": true,
+   "note": "AIC: geometric=2263, negative_binomial=2274, discrete_power_law=2612, poisson=12328"
+  },
+  {
+   "code": "V3-syndrome.negative_binomial",
+   "item": "syndrome AIC negative_binomial",
+   "computed": 2274.2,
+   "stored": 2274.2,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-syndrome.geometric",
+   "item": "syndrome AIC geometric",
+   "computed": 2263.1,
+   "stored": 2263.1,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-syndrome.discrete_power_law",
+   "item": "syndrome AIC discrete_power_law",
+   "computed": 2612.1,
+   "stored": 2612.1,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-herb.best",
+   "item": "herb best discrete model",
+   "computed": "negative_binomial",
+   "stored": "negative_binomial",
+   "abs_delta": null,
+   "passed": true,
+   "note": "AIC: negative_binomial=5182, geometric=5401, discrete_power_law=5453, poisson=131043"
+  },
+  {
+   "code": "V3-herb.negative_binomial",
+   "item": "herb AIC negative_binomial",
+   "computed": 5182.1,
+   "stored": 5182.1,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-herb.geometric",
+   "item": "herb AIC geometric",
+   "computed": 5400.9,
+   "stored": 5400.9,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V3-herb.discrete_power_law",
+   "item": "herb AIC discrete_power_law",
+   "computed": 5453.3,
+   "stored": 5453.3,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V4a",
+   "item": "labelled consecutive transitions",
+   "computed": 809,
+   "stored": 809,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V4b",
+   "item": "mean Jaccard",
+   "computed": 0.1237,
+   "stored": 0.1237,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V4c",
+   "item": "fraction identical sets",
+   "computed": 0.0519,
+   "stored": 0.0519,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V4d",
+   "item": "fraction fully disjoint",
+   "computed": 0.7305,
+   "stored": 0.7305,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V5a",
+   "item": "explicit both-date intervals",
+   "computed": 1526,
+   "stored": 1526,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V5b",
+   "item": "median days",
+   "computed": 15.0,
+   "stored": 15.0,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V5c",
+   "item": "fraction in [5,8] days",
+   "computed": 0.244,
+   "stored": 0.24442988204456095,
+   "abs_delta": 0.0004298820445609586,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V6a",
+   "item": "chi2 (syndrome x tongue)",
+   "computed": 2995.0026222703073,
+   "stored": 2993,
+   "abs_delta": 2.0026222703072563,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V6b",
+   "item": "Cramer's V",
+   "computed": 0.482,
+   "stored": 0.482,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V6c",
+   "item": "tongue present | syndrome %",
+   "computed": 83.1,
+   "stored": 83.1,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V6d",
+   "item": "tongue present | no syndrome %",
+   "computed": 34.1,
+   "stored": 34.1,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V6e",
+   "item": "symptoms/visit with syndrome",
+   "computed": 7.498836758433502,
+   "stored": 7.5,
+   "abs_delta": 0.0011632415664983853,
+   "passed": true,
+   "note": "denominator=labelled visits"
+  },
+  {
+   "code": "V6f",
+   "item": "symptoms/visit without syndrome",
+   "computed": 2.465125290622578,
+   "stored": 2.47,
+   "abs_delta": 0.004874709377422182,
+   "passed": true,
+   "note": "denominator=ALL unlabelled visits"
+  },
+  {
+   "code": "V7-has_tongue.u",
+   "item": "has_tongue OR unadjusted",
+   "computed": 9.53,
+   "stored": 9.53,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V7-has_tongue.a",
+   "item": "has_tongue OR adjusted (+loglen)",
+   "computed": 5.0,
+   "stored": 5.0,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V7-has_tongue.p",
+   "item": "has_tongue p adjusted (log10)",
+   "computed": -217.8,
+   "stored": -217.8,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V7-has_pulse.u",
+   "item": "has_pulse OR unadjusted",
+   "computed": 5.87,
+   "stored": 5.87,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V7-has_pulse.a",
+   "item": "has_pulse OR adjusted (+loglen)",
+   "computed": 3.63,
+   "stored": 3.63,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V7-has_pulse.p",
+   "item": "has_pulse p adjusted (log10)",
+   "computed": -163.0,
+   "stored": -163.0,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V8a",
+   "item": "median upper bound (thr>=5)",
+   "computed": 0.401,
+   "stored": 0.401,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V8b",
+   "item": "n syndromes",
+   "computed": 121,
+   "stored": 121,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V8c",
+   "item": "n with bound<1 (binding)",
+   "computed": 120,
+   "stored": 120,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V9a",
+   "item": "pairs testable at both levels",
+   "computed": 630,
+   "stored": 630,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V9b",
+   "item": "visit-level FDR-sig (of common)",
+   "computed": 314,
+   "stored": 314,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V9c",
+   "item": "patient-level FDR-sig (of common)",
+   "computed": 296,
+   "stored": 296,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V9d",
+   "item": "significant at BOTH",
+   "computed": 276,
+   "stored": 276,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V10a",
+   "item": "network nodes V",
+   "computed": 91,
+   "stored": 91,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V10b",
+   "item": "network edges E",
+   "computed": 214,
+   "stored": 214,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V10c",
+   "item": "communities",
+   "computed": 7,
+   "stored": 7,
+   "abs_delta": 0,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V10d",
+   "item": "modularity Q",
+   "computed": 0.4811,
+   "stored": 0.481,
+   "abs_delta": 0.0001000000000000445,
+   "passed": true,
+   "note": ""
+  },
+  {
+   "code": "V11",
+   "item": "silhouette (k=2)",
+   "computed": 0.366,
+   "stored": 0.366,
+   "abs_delta": 0.0,
+   "passed": true,
+   "note": ""
+  }
+ ],
+ "n_pass": 58,
+ "n_total": 58,
+ "failures": [],
+ "effective_vocabulary": {
+  "symptom": [
+   1487,
+   1375
+  ],
+  "syndrome": [
+   233,
+   230
+  ],
+  "herb": [
+   703,
+   457
+  ]
+ },
+ "notes": [
+  "实体表规模 ≠ 实际使用规模：症状 1375/1487、证型 230/233、中药仅 457/703 出现在处方边中",
+  "symptom 的分布统计按原始边计数（含重复边）；去重后 Gini 0.6583→0.6542",
+  "syndrome 的分布统计按原始边计数（含重复边）；去重后 Gini 0.5259→0.5231",
+  "herb 的分布统计按原始边计数（含重复边）；去重后 Gini 0.7233→0.7224"
+ ]
+}

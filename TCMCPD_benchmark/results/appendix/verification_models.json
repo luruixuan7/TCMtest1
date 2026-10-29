@@ -1,0 +1,283 @@
+{
+ "checks": [
+  {
+   "check": "B1 train/val/test patient disjoint",
+   "pass": true,
+   "detail": "|tr|=2759 |va|=591 |te|=592"
+  },
+  {
+   "check": "B1 counts match meta",
+   "pass": true,
+   "detail": "(3525, 745, 777) vs meta (3525, 745, 777)"
+  },
+  {
+   "check": "B1 cache row count == visits used",
+   "pass": true,
+   "detail": "(5047, 900)"
+  },
+  {
+   "check": "B1 index arrays disjoint",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B1 split deterministic (seed 42)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B2 train/val/test patient disjoint",
+   "pass": true,
+   "detail": "|tr|=2818 |va|=604 |te|=605"
+  },
+  {
+   "check": "B2 counts match meta",
+   "pass": true,
+   "detail": "(5512, 1168, 1179) vs meta (5512, 1168, 1179)"
+  },
+  {
+   "check": "B2 cache row count == visits used",
+   "pass": true,
+   "detail": "(7859, 976)"
+  },
+  {
+   "check": "B2 index arrays disjoint",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B2 split deterministic (seed 42)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B1 feature dim == train-only vocab",
+   "pass": true,
+   "detail": "(900, 900)"
+  },
+  {
+   "check": "B1 label dim == train-only label space",
+   "pass": true,
+   "detail": "(91, 91)"
+  },
+  {
+   "check": "B1 all labels >=30 positives in train",
+   "pass": true,
+   "detail": "min=30"
+  },
+  {
+   "check": "B2 feature dim == train-only vocab",
+   "pass": true,
+   "detail": "(976, 976)"
+  },
+  {
+   "check": "B2 label dim == train-only label space",
+   "pass": true,
+   "detail": "(360, 360)"
+  },
+  {
+   "check": "B2 all labels >=5 positives in train",
+   "pass": true,
+   "detail": "min=5"
+  },
+  {
+   "check": "B1 metrics reproduce (n=3 models, max abs err)",
+   "pass": true,
+   "detail": "{'R@10': 1.37e-08, 'mAP@10': 0.0, 'microF1': 0.0, 'macroF1': 0.0}"
+  },
+  {
+   "check": "B2 metrics reproduce (n=3 models, max abs err)",
+   "pass": true,
+   "detail": "{'R@10': 8.4e-09, 'mAP@10': 0.0, 'microF1': 0.0, 'macroF1': 0.0}"
+  },
+  {
+   "check": "B1 thresholds == argmax on val",
+   "pass": true,
+   "detail": "19/19"
+  },
+  {
+   "check": "B2 thresholds == argmax on val",
+   "pass": true,
+   "detail": "19/19"
+  },
+  {
+   "check": "B1 all point estimates inside their 95% CI",
+   "pass": true,
+   "detail": "0/57 outside"
+  },
+  {
+   "check": "B1 p-values >= 1/boot resolution",
+   "pass": true,
+   "detail": "min p=0.0033 (resolution 0.0033)"
+  },
+  {
+   "check": "B2 all point estimates inside their 95% CI",
+   "pass": true,
+   "detail": "0/57 outside"
+  },
+  {
+   "check": "B2 p-values >= 1/boot resolution",
+   "pass": true,
+   "detail": "min p=0.0033 (resolution 0.0033)"
+  },
+  {
+   "check": "B1 predictions finite, in [0,1], non-constant",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "B1 caches are separate task tensors",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B2 predictions finite, in [0,1], non-constant",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "B2 caches are separate task tensors",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "B1 macro-F1 ranking stable under convention",
+   "pass": true,
+   "detail": "rho=1.0000 top_changed=False"
+  },
+  {
+   "check": "B2 macro-F1 ranking stable under convention",
+   "pass": true,
+   "detail": "rho=1.0000 top_changed=False"
+  }
+ ],
+ "leakage": {
+  "B1": {
+   "test_rows_with_no_known_feature": 0.001287001287001287,
+   "features": 900,
+   "labels": 91
+  },
+  "B2": {
+   "test_rows_with_no_known_feature": 0.0033927056827820186,
+   "features": 976,
+   "labels": 360
+  }
+ },
+ "labels": {
+  "B1": {
+   "n_labels": 91,
+   "test_labels_with_zero_positives": 0,
+   "median_positives": 12.0,
+   "mean_labels_per_sample": 1.747747778892517
+  },
+  "B2": {
+   "n_labels": 360,
+   "test_labels_with_zero_positives": 38,
+   "median_positives": 9.0,
+   "mean_labels_per_sample": 6.792196750640869
+  }
+ },
+ "macro_convention": {
+  "B1": {
+   "n_labels_total": 91,
+   "n_labels_zero_test_positives": 0,
+   "rank_spearman_all_vs_kept": 1.0,
+   "top_model_changed": false,
+   "top5_all": [
+    [
+     "label-graph+ASL",
+     0.0831
+    ],
+    [
+     "TabPFNv2(2025)",
+     0.0795
+    ],
+    [
+     "label-graph(ML-GCN)",
+     0.0765
+    ],
+    [
+     "logreg-ovr",
+     0.0755
+    ],
+    [
+     "xgboost-ovr",
+     0.0735
+    ]
+   ],
+   "top5_kept": [
+    [
+     "label-graph+ASL",
+     0.0831
+    ],
+    [
+     "TabPFNv2(2025)",
+     0.0795
+    ],
+    [
+     "label-graph(ML-GCN)",
+     0.0765
+    ],
+    [
+     "logreg-ovr",
+     0.0755
+    ],
+    [
+     "xgboost-ovr",
+     0.0735
+    ]
+   ]
+  },
+  "B2": {
+   "n_labels_total": 360,
+   "n_labels_zero_test_positives": 38,
+   "rank_spearman_all_vs_kept": 1.0,
+   "top_model_changed": false,
+   "top5_all": [
+    [
+     "xgboost-ovr",
+     0.0651
+    ],
+    [
+     "label-graph+ASL",
+     0.0599
+    ],
+    [
+     "logreg-ovr",
+     0.0595
+    ],
+    [
+     "label-graph(ML-GCN)",
+     0.0537
+    ],
+    [
+     "lightgbm-ovr",
+     0.0529
+    ]
+   ],
+   "top5_kept": [
+    [
+     "xgboost-ovr",
+     0.0728
+    ],
+    [
+     "label-graph+ASL",
+     0.067
+    ],
+    [
+     "logreg-ovr",
+     0.0665
+    ],
+    [
+     "label-graph(ML-GCN)",
+     0.06
+    ],
+    [
+     "lightgbm-ovr",
+     0.0591
+    ]
+   ]
+  }
+ },
+ "failures": []
+}
